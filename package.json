@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "migrate-prisma": "npx prisma migrate dev --name init",
-    "add-data": "ts-node src/lib/addData.ts"
+	"reset-prisma": "npx prisma migrate reset",
+    "addData": "ts-node src/lib/addData.ts",
+	"findDataByID": "ts-node src/lib/findByID.ts",
+	"deleteData": "ts-node src/lib/deleteAll.ts",
+	"deleteDataID": "ts-node src/lib/deleteByID.ts",
+	"updateDataID": "ts-node src/lib/updateByID.ts"
   },
   "author": "- K",
   "license": "ISC",
