@@ -2,7 +2,7 @@ import { prismaClient as Prisma } from './PrismaClient';
 import Characters from '../data/characters.json';
 
 // Add quotes
-async function main() {
+async function addData() {
 	await Prisma.characters.createMany({
 		data: Characters
 	})
@@ -11,7 +11,7 @@ async function main() {
 	console.log(`Characters added successfully, ${DbCharCount} characters total.`)
 }
 
-main()
+addData()
   .then(async () => {
     await Prisma.$disconnect()
   })
